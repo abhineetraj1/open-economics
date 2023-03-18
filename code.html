@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Economics</title>
+    <link rel="stylesheet" type="text/css" href="static/style/nav.css">
+    <link rel="stylesheet" type="text/css" href="static/style/code.css">
+    <link rel="shortcut icon" href="static/png/favicon.png">
+</head>
+</head>
+<body>
+
+<nav>
+    Open economics <button id="nav-bar">=</button>
+    <div id="nav-lt">
+        <ul>
+            <a class="nav-a" href='index.html'><li class="nav-li">Home</li></a>
+            <a class="nav-a" href='code.html'><li class="nav-li">Code</li></a>
+            <a class="nav-a" href='working.html'><li class="nav-li">Working</li></a>
+            <a class="nav-a" href='sample.html'><li class="nav-li">Sample</li></a>
+            <a class="nav-a" href='https://github.com/abhineetraj1'><li class="nav-li">Contribute</li></a>
+        </ul>
+    </div>
+</nav>
+
+<div class="dv" id="fg">
+    <h2 class="h-tt">Python code</h2>
+    <textarea class="code-trm" readonly>
+from open_economics import *
+
+# Sample input data
+oil_price = [10, 12, 15, 20, 25, 30, 35, 40, 45, 50]
+currency_value = [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1]
+
+# Create an instance of DataPredictor
+predictor = DataPredictor()
+
+# Call predict_data method
+result = predictor.predict_data(oil_price, currency_value)
+
+# Print result
+print("The minimum value of y is", result["price"], " at day ", str(10+result["data"]))
+
+    </textarea>
+    <h2 class="h-tt">Ruby code</h2>
+    <textarea class="code-trm" readonly>
+from open_economics import *
+
+# Sample input data
+oil_price = [10, 12, 15, 20, 25, 30, 35, 40, 45, 50]
+currency_value = [1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1]
+
+# Call predict_data function
+result = predict_data(oil_price, currency_value)
+
+# Print result
+puts "The minimum value of y is #{result[:price]} at index #{result[:data]}."
+    </textarea>
+    <h2 class="h-tt">JS code</h2>
+    <textarea class="code-trm" readonly>
+var oil_prices = [20, 25, 30, 35, 40, 45, 50, 55, 60, 65];
+var currency_values = [1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0];
+
+result = predictData(oil_prices, currency_values);
+
+console.log(result);
+    </textarea>
+
+
+</div>
+<script type="text/javascript" src="static/script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Open Economics</title>
+    <script type="text/javascript" src="open_economics.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/style/nav.css">
+    <link rel="stylesheet" type="text/css" href="static/style/sample.css">
+    <link rel="shortcut icon" href="static/png/favicon.png">
+</head>
+</head>
+<body>
+
+<nav>
+    Sample <button id="nav-bar">=</button>
+    <div id="nav-lt">
+        <ul>
+            <a class="nav-a" href='index.html'><li class="nav-li">Home</li></a>
+            <a class="nav-a" href='code.html'><li class="nav-li">Code</li></a>
+            <a class="nav-a" href='working.html'><li class="nav-li">Working</li></a>
+            <a class="nav-a" href='sample.html'><li class="nav-li">Sample</li></a>
+            <a class="nav-a" href='https://github.com/abhineetraj1'><li class="nav-li">Contribute</li></a>
+        </ul>
+    </div>
+</nav>
+
+<div class="dv" id="fg">
+    <br>
+    <table>
+        <tr>
+            <td>Day</td>
+            <td>Oil price<br> ($ per barrel)</td>
+            <td>Curreny value <br>(against dollar)</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>102</td>
+            <td>78</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>103</td>
+            <td>79</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>104</td>
+            <td>79</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>103</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>105</td>
+            <td>81</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>102</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>104</td>
+            <td>82</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>107</td>
+            <td>83</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>104</td>
+            <td>81</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>101</td>
+            <td>81</td>
+        </tr>
+    </table>
+    <center>
+        <button class="nn-btn" onclick="m()">Emulate</button>
+        <p id="fgo">
+        </p>
+    </center>
+    <script type="text/javascript">
+        function m() {
+            var oil_prices = [102, 103, 104, 103, 105, 102, 104, 107, 104, 101];
+            var currency_values = [78,79,79,80,81,82,82,83,81,81];
+            result = predictData(oil_prices, currency_values);
+            console.log(result);
+            var c = result["data"];
+            console.log(result["data"]);
+            document.getElementById('fgo').innerHTML = "On day "+ parseInt(10+c+1) +"th price will be "+result["price"]+" inr.";
+        }
+    </script>
+</div>
+<script type="text/javascript" src="static/script/index.js"></script>
+</body>
+</html>

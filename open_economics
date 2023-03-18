@@ -1,0 +1,31 @@
+import math
+
+class Predictor:
+    def __init__(self):
+        self.b0 = -5
+        self.b1 = 0.1
+
+    def predict_value(self, array):
+        predicted_prices = []
+        for i in range(10):
+            z = self.b0 + self.b1 * array[-1]
+            p = 1 / (1 + math.exp(-z))
+            predicted_price = round(p * 100)
+            predicted_prices.append(predicted_price)
+            array.append(predicted_price)
+        return predicted_prices
+
+class DataPredictor:
+    def __init__(self):
+        self.predictor = Predictor()
+
+    def predict_data(self, oil_price, currency_value):
+        if len(oil_price) == len(currency_value) == 10:
+            oil_predicted = self.predictor.predict_value(oil_price)
+            currency_predicted = self.predictor.predict_value(currency_value)
+            y = [oil_predicted[i] * currency_predicted[i] for i in range(10)]
+            min_value = min(y)
+            min_index = y.index(min_value)
+            return {"data": min_index, "price": min_value}
+        else:
+            print("List value is incomplete")

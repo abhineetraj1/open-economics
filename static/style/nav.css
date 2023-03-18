@@ -1,0 +1,58 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+nav{
+	margin: 0px;
+	font-family: Bahnschrift;
+	font-size: 30px;
+	padding: 3px;
+	text-align: center;
+	color: white;
+	background: #6100ff;
+	box-shadow: 0px 0px 10px black;
+}
+.dv{
+	width: 100%;
+}
+#fg{
+	padding: 1vh;
+	font-size: 20px;
+}
+.hd-tt{
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+#nav-bar{
+	background: transparent;
+	border-width: 0px;
+	color: white;
+	font-size: 30px;
+	float: right;
+}
+.nav-li{
+	text-align: left;
+	font-size: 20px;
+	list-style-type: none;
+}
+#nav-lt{
+	display: none;
+	width: 250px;
+	float: right;
+	height: 100vh;
+	background: #6100ff;
+}
+.nav-a{
+	color: white;
+}
+.nn-btn{
+	background: #6100ff;
+	color: white;
+	font-size: 20px;
+	margin: 1vh;
+	padding: 3px;
+	border-width: 0px;
+	border-radius: 10px;
+	padding-left: 5px;
+	padding-right: 10px;
+}

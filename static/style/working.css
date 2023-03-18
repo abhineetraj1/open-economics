@@ -1,0 +1,14 @@
+.code{
+	background: white;
+	color: white;
+	font-size: 25px;
+	background: black;
+	margin: 1vh;
+	border: solid;
+	border-width: 0px;
+	box-shadow: 0px 0px 5px black;
+	width: 80%;
+	position: relative;
+	left: 10%;
+	text-align: center;
+}

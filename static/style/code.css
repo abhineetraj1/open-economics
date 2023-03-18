@@ -1,0 +1,18 @@
+.code-trm{
+	background: black;
+	color: white;
+	border-width: 0px;
+	color: #00e8ff;
+	border-radius: 8px;
+	text-align: left;
+	height: 150px;
+	position: relative;
+	left: 10%;
+	margin: 3vh;
+	box-shadow: 0px 0px 4px black;
+	width: 80%;
+}
+.h-tt{
+	position: relative;
+	left: 10%;
+}
