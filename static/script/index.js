@@ -1,9 +1,5 @@
-document.getElementById('nav-bar').onclick = function () {
-	if (document.getElementById('nav-bar').innerHTML == "=") {
-		document.getElementById('nav-bar').innerHTML = "X";
-		document.getElementById('nav-lt').style.display='block';
-	} else {
-		document.getElementById('nav-bar').innerHTML = "=";
-		document.getElementById('nav-lt').style.display='none';
-	}
+if (window.innerHeight > window.innerWidth) {
+	document.getElementById('myvid').style.height="100vh";
+} else {
+	document.getElementById('myvid').style.width = "100%";
 }

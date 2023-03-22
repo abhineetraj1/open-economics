@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Open Economics</title>
-    <script type="text/javascript" src="open_economics.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/style/nav.css">
-    <link rel="stylesheet" type="text/css" href="static/style/sample.css">
-    <link rel="shortcut icon" href="static/png/favicon.png">
-</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Open economics</title>
+	<link rel="shortcut icon" href="static/png/favicon.png">
+	<link rel="stylesheet" type="text/css" href="static/style/index.css">
 </head>
 <body>
 
-<nav>
-    Sample <button id="nav-bar">=</button>
-    <div id="nav-lt">
-        <ul>
-            <a class="nav-a" href='index.html'><li class="nav-li">Home</li></a>
-            <a class="nav-a" href='code.html'><li class="nav-li">Code</li></a>
-            <a class="nav-a" href='working.html'><li class="nav-li">Working</li></a>
-            <a class="nav-a" href='sample.html'><li class="nav-li">Sample</li></a>
-            <a class="nav-a" href='https://github.com/abhineetraj1/open-economics'><li class="nav-li">Contribute</li></a>
-        </ul>
-    </div>
-</nav>
+<video autoplay muted loop id="myvid">
+	<source src="static/png/Untitled.mp4">
+</video>
 
-<div class="dv" id="fg">
+<div id="content">
+	<p id="tt">Open economics</p>
+	<nav>
+        <a href="index.html"><button class="bt-btn">Home</button></a>|
+		<a href="code.html"><button class="bt-btn">Code</button></a>|
+		<a href="working.html"><button class="bt-btn">Working</button></a>|
+		<a href="sample.html"><button class="bt-btn">Sample</button></a>|
+		<a target="_blank" href="https://github.com/abhineetraj1/open-economics"><button class="bt-btn">Github</button></a>
+	</nav>
+	<div id="cnt">
+		
     <br>
     <table>
         <tr>
@@ -84,8 +82,8 @@
             <td>81</td>
         </tr>
     </table>
-    <center>
-        <button class="nn-btn" onclick="m()">Emulate</button>
+    <center><br><br>
+        <button id="emu-btn" onclick="m()">Emulate</button>
         <p id="fgo">
         </p>
     </center>
@@ -100,7 +98,11 @@
             document.getElementById('fgo').innerHTML = "On day "+ parseInt(10+c+1) +"th price will be "+result["price"]+" inr.";
         }
     </script>
+
+	</div>
 </div>
 <script type="text/javascript" src="static/script/index.js"></script>
+<script type="text/javascript" src="static/script/load.js"></script>
+<script type="text/javascript" src="open_economics.js"></script>
 </body>
 </html>

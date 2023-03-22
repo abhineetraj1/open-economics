@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Working</title>
-    <link rel="stylesheet" type="text/css" href="static/style/nav.css">
-    <link rel="stylesheet" type="text/css" href="static/style/working.css">
-    <link rel="shortcut icon" href="static/png/favicon.png">
-</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Open economics</title>
+	<link rel="shortcut icon" href="static/png/favicon.png">
+	<link rel="stylesheet" type="text/css" href="static/style/index.css">
 </head>
 <body>
 
-<nav>
-    Open economics <button id="nav-bar">=</button>
-    <div id="nav-lt">
-        <ul>
-            <a class="nav-a" href='index.html'><li class="nav-li">Home</li></a>
-            <a class="nav-a" href='code.html'><li class="nav-li">Code</li></a>
-            <a class="nav-a" href='working.html'><li class="nav-li">Working</li></a>
-            <a class="nav-a" href='sample.html'><li class="nav-li">Sample</li></a>
-            <a class="nav-a" href='https://github.com/abhineetraj1/open-economics'><li class="nav-li">Contribute</li></a>
-        </ul>
-    </div>
+<video autoplay muted loop id="myvid">
+	<source src="static/png/Untitled.mp4">
+</video>
 
-</nav>
-
-<div class="dv" id="fg">
-    <br>
-    <h2>Working</h2>
-    The project created in JavaScript uses logistic regression to predict the optimal time for a country to buy oil from OPEC. Here is a general overview of how the project works:
-    <br>
-    <p class="hd-tt">Data Collection</p>
-    The project collects data on the oil prices declared by OPEC for the last 10 days, the currency value of the user's country with respect to the dollar, and the oil consumption of the user's country.
-    <br>
-    <p class="hd-tt">Data Preprocessing</p>
-    The collected data is preprocessed to ensure its quality and consistency. This involves cleaning the data, removing any outliers or errors, and converting the data into a suitable format for analysis.
-    <br>
-    <p class="hd-tt">Feature Selection</p>
-    Relevant features that are important for predicting the optimal time to buy oil from OPEC are identified using various statistical and machine learning techniques.
-    <br>
-    <p class="hd-tt">Model Development</p>
-    The logistic regression model is developed using the identified relevant features. The model is trained on historical data to identify patterns and relationships between the predictor variables and the binary outcome.
-    <br>
-    <p class="hd-tt">Model Evaluation</p>
-    The logistic regression model is evaluated using various evaluation metrics such as mean squared error, root mean squared error, or coefficient of determination to ensure its accuracy and reliability.
-    <br>
-    <p class="hd-tt">Deployment</p>
-    The logistic regression model is deployed in a production environment where it can be used by end-users to make informed decisions about when to buy oil from OPEC.
-    <br>
-    <p class="hd-tt">Maintenance</p>
-    The logistic regression model is regularly maintained and updated to ensure that it remains accurate and up-to-date with the latest data.
-    
-    <p class="hd-tt">Formula:</p>
-    The logistic regression formula can be extended to predict multiple values in a time series. Assuming that we have only one predictor variable (i.e., the last oil price) and a constant intercept term, the logistic regression formula can be written as:
-    <br>
-    <textarea class="code" readonly>p_i = 1 / (1 + e^(-z_i))</textarea>
-    <br>
-    where p_i is the predicted probability of the next oil price at time i, z_i is the linear combination of the predictor variable (i.e., the oil price at time i-1) and coefficients.
-    <br>
-    <textarea class="code" readonly>z_i = b0 + b1*x_i-1</textarea>
-    <br>
-    where b0 is the intercept term, b1 is the coefficient for the last oil price, and x_i-1 is the oil price at time i-1.
-
+<div id="content">
+	<p id="tt">Open economics</p>
+	<nav>
+        <a href="index.html"><button class="bt-btn">Home</button></a>|
+		<a href="code.html"><button class="bt-btn">Code</button></a>|
+		<a href="working.html"><button class="bt-btn">Working</button></a>|
+		<a href="sample.html"><button class="bt-btn">Sample</button></a>|
+		<a target="_blank" href="https://github.com/abhineetraj1/open-economics"><button class="bt-btn">Github</button></a>
+	</nav>
+	<div id="cnt">
+	    <h2>Working</h2>
+	    The project created in JavaScript uses logistic regression to predict the optimal time for a country to buy oil from OPEC. Here is a general overview of how the project works:
+	    <br>
+	    <p class="hd-tt">Data Collection</p>
+	    The project collects data on the oil prices declared by OPEC for the last 10 days, the currency value of the user's country with respect to the dollar, and the oil consumption of the user's country.
+	    <br>
+	    <p class="hd-tt">Data Preprocessing</p>
+	    The collected data is preprocessed to ensure its quality and consistency. This involves cleaning the data, removing any outliers or errors, and converting the data into a suitable format for analysis.
+	    <br>
+	    <p class="hd-tt">Feature Selection</p>
+	    Relevant features that are important for predicting the optimal time to buy oil from OPEC are identified using various statistical and machine learning techniques.
+	    <br>
+	    <p class="hd-tt">Model Development</p>
+	    The logistic regression model is developed using the identified relevant features. The model is trained on historical data to identify patterns and relationships between the predictor variables and the binary outcome.
+	    <br>
+	    <p class="hd-tt">Model Evaluation</p>
+	    The logistic regression model is evaluated using various evaluation metrics such as mean squared error, root mean squared error, or coefficient of determination to ensure its accuracy and reliability.
+	    <br>
+	    <p class="hd-tt">Deployment</p>
+	    The logistic regression model is deployed in a production environment where it can be used by end-users to make informed decisions about when to buy oil from OPEC.
+	    <br>
+	    <p class="hd-tt">Maintenance</p>
+	    The logistic regression model is regularly maintained and updated to ensure that it remains accurate and up-to-date with the latest data.
+	    
+	    <p class="hd-tt">Formula:</p>
+	    The logistic regression formula can be extended to predict multiple values in a time series. Assuming that we have only one predictor variable (i.e., the last oil price) and a constant intercept term, the logistic regression formula can be written as:
+	    <br>
+	    <textarea class="code" readonly>p_i = 1 / (1 + e^(-z_i))</textarea>
+	    <br>
+	    where p_i is the predicted probability of the next oil price at time i, z_i is the linear combination of the predictor variable (i.e., the oil price at time i-1) and coefficients.
+	    <br>
+	    <textarea class="code" readonly>z_i = b0 + b1*x_i-1</textarea>
+	    <br>
+	    where b0 is the intercept term, b1 is the coefficient for the last oil price, and x_i-1 is the oil price at time i-1.
+	</div>
 </div>
 <script type="text/javascript" src="static/script/index.js"></script>
+<script type="text/javascript" src="static/script/load.js"></script>
 </body>
 </html>
