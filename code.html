@@ -79,6 +79,40 @@ result = predictData(oil_prices, currency_values);
 
 console.log(result);
     </textarea>
+
+    <h2 class="h-tt">Java code</h2>
+    <ul>
+        <li>Download open_economics.java file from this repo</li>
+        <li>Import the lib in java and create the file </li>
+    </ul>
+    <textarea class="code-trm" readonly>
+import org.junit.Test;
+import java.util.Arrays;
+import java.util.List;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
+
+public class DataPredictorTest {
+    @Test
+    public void testPredictData() {
+        DataPredictor dataPredictor = new DataPredictor();
+        List<Integer> oilPrice = Arrays.asList(10, 12, 14, 16, 18, 20, 22, 24, 26, 28);
+        List<Integer> currencyValue = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        PredictedData predictedData = dataPredictor.predictData(oilPrice, currencyValue);
+        assertEquals(0, predictedData.getIndex());
+        assertEquals(50, predictedData.getPredictedValue());
+    }
+
+    @Test
+    public void testPredictDataIncompleteList() {
+        DataPredictor dataPredictor = new DataPredictor();
+        List<Integer> oilPrice = Arrays.asList(10, 12, 14, 16, 18, 20, 22, 24, 26);
+        List<Integer> currencyValue = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        assertNull(dataPredictor.predictData(oilPrice, currencyValue));
+    }
+}
+
+    </textarea>
 		
 	</div>
 </div>
